@@ -1,37 +1,16 @@
+
 import Cards from './Cards/Cards'
-const MainColumn = () => {
+const MainColumn = ({ cardList }) => {
   return (
     <>
-      <div className="main__column column">
-        <div className="column__title">
-          <p>Без статуса</p>
+      {cardList.map((item) => (
+        <div className="main__column" key={item.id}>
+          <div className="column__title">
+            <p>{item.status}</p>
+          </div>
+          <Cards colorTheme={item.color } theme={item.theme} date={item.date} />
         </div>
-        <Cards />
-      </div>
-      <div className="main__column">
-        <div className="column__title">
-          <p>Нужно сделать</p>
-        </div>
-        <Cards />
-      </div>
-      <div className="main__column">
-        <div className="column__title">
-          <p>В работе</p>
-        </div>
-        <Cards />
-      </div>
-      <div className="main__column">
-        <div className="column__title">
-          <p>Тестирование</p>
-        </div>
-        <Cards />
-      </div>
-      <div className="main__column">
-        <div className="column__title">
-          <p>Готово</p>
-        </div>
-        <Cards />
-      </div>
+      ))}
     </>
   )
 }
