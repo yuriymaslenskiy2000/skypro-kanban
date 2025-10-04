@@ -1,6 +1,8 @@
+import { SCardDate } from './Cards.styled'
+
 const CardDate = ({date}) => {
     return (
-      <div className="card__date">
+      <SCardDate>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={13}
@@ -30,7 +32,7 @@ const CardDate = ({date}) => {
           </defs>
         </svg>
             <p>{date}</p>
-      </div>
+      </SCardDate>
     )
 }
 export default CardDate
