@@ -8,8 +8,8 @@ const PopBrowse = () => {
             <div className="pop-browse__content">
               <div className="pop-browse__top-block">
                 <h3 className="pop-browse__ttl">Название задачи</h3>
-                <div className="categories__theme theme-top _orange _active-category">
-                  <p className="_orange">Web Design</p>
+                <div className="categories__theme theme-top orange _active-category">
+                  <p className="orange">Web Design</p>
                 </div>
               </div>
               <div className="pop-browse__status status">
@@ -52,8 +52,8 @@ const PopBrowse = () => {
               </div>
               <div className="theme-down__categories theme-down">
                 <p className="categories__p subttl">Категория</p>
-                <div className="categories__theme _orange _active-category">
-                  <p className="_orange">Web Design</p>
+                <div className="categories__theme orange _active-category">
+                  <p className="orange">Web Design</p>
                 </div>
               </div>
               <div className="pop-browse__btn-browse ">

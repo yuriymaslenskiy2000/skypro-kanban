@@ -1,31 +1,36 @@
 import CardDate from './CardDate'
+import { SCardBtn, SCardContent, SCardGroup, SCards, SCardsCard, SCardsItem, SCardTheme, SCardTittle,} from './Cards.styled'
 
 const Cards = ({ theme, date, colorTheme }) => {
   return (
-    <div className="cards">
-      <div className="cards__item">
-        <div className="cards__card card">
-          <div className="card__group">
-            <div className={`card__theme ${colorTheme}`}>
+    <SCards>
+      <SCardsItem>
+        <SCardsCard>
+          <SCardGroup>
+            {/* <div className={`card__theme ${colorTheme}`}>
+              {console.log(colorTheme)}
               <p className={colorTheme}>{theme}</p>
-            </div>
+            </div> */}
+            <SCardTheme $colorTheme={colorTheme}>
+              <p>{theme}</p>
+            </SCardTheme>
             <a href="#popBrowse" target="_self">
-              <div className="card__btn">
+              <SCardBtn>
                 <div />
                 <div />
                 <div />
-              </div>
+              </SCardBtn>
             </a>
-          </div>
-          <div className="card__content">
+          </SCardGroup>
+          <SCardContent>
             <a href="" target="_blank">
-              <h3 className="card__title">Название задачи</h3>
+              <SCardTittle>Название задачи</SCardTittle>
             </a>
             <CardDate date={date} />
-          </div>
-        </div>
-      </div>
-    </div>
+          </SCardContent>
+        </SCardsCard>
+      </SCardsItem>
+    </SCards>
   )
 }
 export default Cards

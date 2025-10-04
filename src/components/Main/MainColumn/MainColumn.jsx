@@ -1,15 +1,16 @@
 
 import Cards from './Cards/Cards'
+import { SMainColumn, SMainColumnTitle } from './MainColumn.styled'
 const MainColumn = ({ cardList }) => {
   return (
     <>
       {cardList.map((item) => (
-        <div className="main__column" key={item.id}>
-          <div className="column__title">
+      <SMainColumn key={item.id}>
+          <SMainColumnTitle>
             <p>{item.status}</p>
-          </div>
+          </SMainColumnTitle>
           <Cards colorTheme={item.color } theme={item.theme} date={item.date} />
-        </div>
+        </SMainColumn>
       ))}
     </>
   )

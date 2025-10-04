@@ -5,7 +5,7 @@ export const cardList = [
     title: 'Название задачи',
     date: '30.10.23',
     status: 'Без статуса',
-    color: '_orange',
+    color: 'orange',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const cardList = [
     title: 'Название задачи',
     date: '30.10.23',
     status: 'Нужно сделать',
-    color: '_green',
+    color: 'green',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const cardList = [
     title: 'Название задачи',
     date: '30.10.23',
     status: 'В работе',
-    color: '_purple',
+    color: 'purple',
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const cardList = [
     title: 'Название задачи',
     date: '30.10.23',
     status: 'Тестирование',
-    color: '_orange',
+    color: 'orange',
   },
   {
     id: 5,
@@ -37,6 +37,6 @@ export const cardList = [
     title: 'Название задачи',
     date: '30.10.23',
     status: 'Готово',
-    color: '_purple',
+    color: 'purple',
   },
 ]
