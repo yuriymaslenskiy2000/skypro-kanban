@@ -1,4 +1,7 @@
+import { Link, useNavigate } from 'react-router-dom'
+
 const HeaderPopUser = () => {
+  const navigate = useNavigate()
     return (
       <div className="header__pop-user-set pop-user-set" id="user-set-target">
         <p className="pop-user-set__name">Ivan Ivanov</p>
@@ -7,7 +10,7 @@ const HeaderPopUser = () => {
           <p>Темная тема</p>
           <input type="checkbox" className="checkbox" name="checkbox" />
         </div>
-        <button type="button" className="_hover03">
+        <button onClick={() => navigate('/exit')} type="button" className="_hover03">
           <a href="#popExit">Выйти</a>
         </button>
       </div>

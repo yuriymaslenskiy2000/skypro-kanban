@@ -9,7 +9,7 @@ const MainColumn = ({ cardList }) => {
           <SMainColumnTitle>
             <p>{item.status}</p>
           </SMainColumnTitle>
-          <Cards colorTheme={item.color } theme={item.theme} date={item.date} />
+          <Cards id={item.id} colorTheme={item.color } theme={item.theme} date={item.date} />
         </SMainColumn>
       ))}
     </>

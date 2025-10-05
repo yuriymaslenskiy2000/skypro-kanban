@@ -5,15 +5,14 @@ import Header from '../components/Header/Header'
 import Main from '../components/Main/Main'
 import { cardList } from '../data.js'
 import { GlobalStyle, SWrapper } from '../GlobalStyle.styled.js'
+import { Outlet } from 'react-router-dom'
 export const MainApp = () => {
   return (
     <>
       <GlobalStyle />
       <SWrapper>
         {/* pop-up start*/}
-        <PopupExit />
-        <PopNewCard />
-        <PopBrowse />
+        <Outlet />
         {/* pop-up end*/}
         <Header />
         <Main cardList={cardList} />

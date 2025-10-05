@@ -1,41 +1,52 @@
-import "./login.css"
-export const Login = () => {
-    return (
-      <>
-        <div className="wrapper">
-          <div className="container-signin">
-            <div className="modal">
-              <div className="modal__block">
-                <div className="modal__ttl">
-                  <h2>Вход</h2>
-                </div>
-                <form className="modal__form-login" id="formLogIn" action="#">
-                  <input
-                    className="modal__input"
-                    type="text"
-                    name="login"
-                    id="formlogin"
-                    placeholder="Эл. почта"
-                  />
-                  <input
-                    className="modal__input"
-                    type="password"
-                    name="password"
-                    id="formpassword"
-                    placeholder="Пароль"
-                  />
-                  <button className="modal__btn-enter _hover01" id="btnEnter">
-                    <a href="../main.html">Войти</a>
-                  </button>
-                  <div className="modal__form-group">
-                    <p>Нужно зарегистрироваться?</p>
-                    <a href="signup.html">Регистрируйтесь здесь</a>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
-    )
+import { Link, useNavigate } from 'react-router-dom'
+import {
+  SContainerSignIn,
+  SModal,
+  SModalBlock,
+  SModalBtn,
+  SModalFormGroup,
+  SModalFormLogin,
+  SModalInput,
+  SModalTtl,
+  SWrapper,
+} from './Login.styled'
+export const Login = ({ setAuth }) => {
+  const navigate = useNavigate()
+  const loginAuth = (e) => {
+    e.preventDefault()
+    setAuth(true)
+    navigate('/')
+  }
+
+  return (
+    <>
+      <SWrapper>
+        <SContainerSignIn>
+          <SModal>
+            <SModalBlock>
+              <SModalTtl>
+                <h2>Вход</h2>
+              </SModalTtl>
+              <SModalFormLogin action="#">
+                <SModalInput type="text" name="login" id="formlogin" placeholder="Эл. почта" />
+                <SModalInput
+                  type="password"
+                  name="password"
+                  id="formpassword"
+                  placeholder="Пароль"
+                />
+                <SModalBtn onClick={(e) => loginAuth(e)}>
+                  <Link to="/">Войти</Link>
+                </SModalBtn>
+                <SModalFormGroup>
+                  <p>Нужно зарегистрироваться?</p>
+                  <Link to="/register">Регистрируйтесь здесь</Link>
+                </SModalFormGroup>
+              </SModalFormLogin>
+            </SModalBlock>
+          </SModal>
+        </SContainerSignIn>
+      </SWrapper>
+    </>
+  )
 }

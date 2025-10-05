@@ -1,4 +1,6 @@
+import { Link, NavLink } from 'react-router-dom'
 import Calendar from '../../Calendar/Calendar'
+import { HomePage } from '../../../pages/Home'
 
 const PopNewCard = () => {
   return (
@@ -7,9 +9,9 @@ const PopNewCard = () => {
         <div className="pop-new-card__block">
           <div className="pop-new-card__content">
             <h3 className="pop-new-card__ttl">Создание задачи</h3>
-            <a href="#" className="pop-new-card__close">
+            <Link  to="/" className="pop-new-card__close">
               ✖
-            </a>
+            </Link>
             <div className="pop-new-card__wrap">
               <form className="pop-new-card__form form-new" id="formNewCard" action="#">
                 <div className="form-new__block">

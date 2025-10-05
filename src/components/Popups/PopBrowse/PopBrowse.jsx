@@ -1,17 +1,21 @@
+import { Link, useParams } from 'react-router-dom';
 import Calendar from '../../Calendar/Calendar';
 
 const PopBrowse = () => {
-    return (
-      <div className="pop-browse" id="popBrowse">
-        <div className="pop-browse__container">
-          <div className="pop-browse__block">
-            <div className="pop-browse__content">
-              <div className="pop-browse__top-block">
-                <h3 className="pop-browse__ttl">Название задачи</h3>
-                <div className="categories__theme theme-top orange _active-category">
-                  <p className="orange">Web Design</p>
-                </div>
+  const { id } = useParams();
+
+  return (
+    <div className="pop-browse" id="popBrowse">
+      <div className="pop-browse__container">
+        <div className="pop-browse__block">
+          <div className="pop-browse__content">
+            <div className="pop-browse__top-block">
+              <h3 className="pop-browse__ttl">Название задачи</h3>
+              <p className="pop-browse__id">Номер карточки:{id}</p>
+              <div className="categories__theme theme-top orange _active-category">
+                <p className="orange">Web Design</p>
               </div>
+            </div>
               <div className="pop-browse__status status">
                 <p className="status__p subttl">Статус</p>
                 <div className="status__themes">
@@ -66,7 +70,7 @@ const PopBrowse = () => {
                   </button>
                 </div>
                 <button className="btn-browse__close _btn-bg _hover01">
-                  <a href="#">Закрыть</a>
+                  <Link to="/">Закрыть</Link>
                 </button>
               </div>
               <div className="pop-browse__btn-edit _hide">
