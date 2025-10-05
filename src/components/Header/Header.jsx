@@ -9,6 +9,7 @@ import {
 } from './Header.styled.js'
 import HeaderPopUser from '../Popups/HeaderPopUser/HeaderPopUser.jsx'
 import { SContainer } from '../../GlobalStyle.styled.js'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,6 +17,7 @@ const Header = () => {
   const openModal = () => {
     setIsOpen((prevState) => !prevState)
   }
+  const navigate = useNavigate();
   return (
     <StyledHeader>
       <SContainer>
@@ -32,7 +34,9 @@ const Header = () => {
           </StyledHeaderLogo>
           <StyledHeaderNav>
             <StyledHeaderBtnMain>
-              <a href="#popNewCard">Создать новую задачу</a>
+              <a onClick={() => navigate('/add-task')} href="#popNewCard">
+                Создать новую задачу
+              </a>
             </StyledHeaderBtnMain>
             <SHeaderUserLink onClick={openModal} href="#user-set-target">
               Ivan Ivanov
