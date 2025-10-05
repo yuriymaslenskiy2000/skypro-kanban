@@ -657,7 +657,7 @@ body {
   letter-spacing: -0.14px;
 }
 
-/* .status {
+.status {
   margin-bottom: 11px;
 }
 .status__p {
@@ -681,7 +681,7 @@ body {
   font-size: 14px;
   line-height: 1;
   letter-spacing: -0.14px;
-} */
+}
 
 ._btn-bor {
   border-radius: 4px;
